@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 
-ENV CHROMEDRIVER_VERSION 2.43
+ENV CHROMEDRIVER_VERSION 2.46
 
 # Allow https sources
 RUN apt-get update && apt-get install -y apt-transport-https
