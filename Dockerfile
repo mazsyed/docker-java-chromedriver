@@ -10,8 +10,7 @@ RUN apt-get update \
 && apt-get install -y libxss1 libappindicator3-1 libindicator7 fonts-liberation lsb-release xdg-utils xvfb \
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && dpkg -i google-chrome*.deb \
-&& sudo apt-get install libappindicator1 \
-&& sudo apt-get -f install \
+&& apt-get install -f \
 && rm "google-chrome-stable_current_amd64.deb" \
 && rm -rf /var/lib/apt/lists/*
 
