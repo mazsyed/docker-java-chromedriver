@@ -6,7 +6,7 @@ ENV CHROMEDRIVER_VERSION 75.0.3770.140
 RUN apt-get update && apt-get install -y apt-transport-https
 
 # Install Chrome and xvfb
-RUN apt-get update \
+RUN sudo dpkg --add-architecture i386 && apt-get update \
 && apt-get install -y libxss1 libappindicator3-1 libindicator7 fonts-liberation lsb-release xdg-utils xvfb \
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && sudo dpkg -i google-chrome*.deb \
